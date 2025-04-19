@@ -64,7 +64,7 @@ In both experiments the following scores were calculated to measure the performa
 ## Evaluation
 **Decision Tree**
 
-The Decision Tree machine learning algorithm was the first experiment. To better understand the flow of the data in this algorithm, many parameters had to be tested. The first parameter to be experimented with was the test size. Intuitively, this played a role in the fine balancing act of underfitting and overfitting as this parameter would determine how much of the data would act as training data and how much would act as test data. I ran the algorithm over the range of 35% to 85%, recorded the results in a spreadsheet and plotted the test accuracy against the training accuracy. These two data points had unexpected behavior in the middle of the range with one being greater than the other then inverting, however the highest possible score of both as well as the smallest difference between these two scores was ultimately selected to avoid overfitting or underfitting patterns. Once the test size was determined to be 40%, experimentation continued with maximum leaf node size. As anticipated, the accuracies drastically grew proportionally as the maximum leaf nodes increased from 2 to 10. I did not expect to calculate a 100% test accuracy and 100% training accuracy with 10 maximum nodes. At 8 maximum leaf nodes, the decision tree had a test accuracy and training accuracy of 99.5 and 99.6, respectively.
+The Decision Tree machine learning algorithm was the first experiment. To better understand the flow of the data in this algorithm, many parameters had to be tested. The first parameter to be experimented with was the test size. Intuitively, this played a role in the fine balancing act of underfitting and overfitting as this parameter would determine how much of the data would act as training data and how much would act as test data. I ran the algorithm over the range of 35% to 85%, recorded the results in a spreadsheet and plotted the test accuracy against the training accuracy. These two data points had unexpected behavior in the middle of the range with one being greater than the other then inverting, however the highest possible score of both as well as the smallest difference between these two scores was ultimately selected to avoid overfitting or underfitting patterns. Once the test size was determined to be 40%, experimentation continued with maximum leaf node size. As anticipated, the accuracies drastically grew proportionally as the maximum leaf nodes increased from 2 to 10. I did not expect to calculate a 100% test accuracy and 100% training accuracy with 10 maximum nodes. At 8 maximum leaf nodes, the decision tree had a test accuracy and training accuracy of 99.5% and 99.6%, respectively.
 
 ![Decision Tree](Diagrams/DT/dt_ts0.4_10maxnode.png)
 > Decision Tree
@@ -73,13 +73,16 @@ The Decision Tree machine learning algorithm was the first experiment. To better
 > Confusion Matrix
 
 ![DT Accuracy vs Max Leaf Nodes](https://github.com/MatthewBorja/Mushrooms_Poisonous-or-Edible/blob/main/Diagrams/cse5160%20pictures/dt_accuracy2.JPG)
+> Accuracy vs Max Leaf Nodes
 
 **Naive Bayes**
 
 Implementing Naive Bayes Classifier began with understanding the trends of the data set. Although the CategoricalNB is much simpler than DecisionTreeClassifier in the possible parameters as well as what its return value is, the test size was the main focus of this experiment. Various trials were conducted on the range of test sizes from 10% to 75%. Any test size above 75% resulted in errors from the script. Surprisingly, the accuracies topped out at around 20% before falling significantly as the test size grew. At 20% test size, both the score and training accuracy were the highest at 98.1%, with a difference of only 0.874% between them. These were the best values of the set. It should be noted that even at the ranges with poorer values, such as 75% test size, the score and accuracy were still above 94.5%.
 
 ![Naive Bayes Confusion Matrix](Diagrams/NB/cm_ts0.25.png)
+> Confusion Matrix
 
 ![NB Accuracy](Diagrams/naivebayes_accuracy_graph.JPG)
+> Accuracy vs Test size %
 
 Check out the [full report](https://github.com/MatthewBorja/Mushrooms_Poisonous-or-Edible/blob/e58d3aefc044cd65ac9d44de80921d46fcaf515c/Reports/Mushrooms%20Final%20Report.pdf).
